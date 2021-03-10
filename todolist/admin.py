@@ -18,4 +18,6 @@ class TodoAdmin(admin.ModelAdmin):
         "notes",
         "category",
         "type",
+        "due",
     )
+    readonly_fields = ("created_at",)
