@@ -10,6 +10,9 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"
+        ordering = [
+            "name",
+        ]
 
 
 class Todo(models.Model):
@@ -25,3 +28,9 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = [
+            "type",
+            "title",
+        ]
