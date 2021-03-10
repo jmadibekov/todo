@@ -26,7 +26,8 @@ class Todo(models.Model):
 
     def clean(self):
         # Due date & time should be no earlier than created_at.
-        if self.due < self.created_at:
+        created_at = self.created_at if self.created_at else timezone.now()
+        if self.due < created_at:
             raise exceptions.ValidationError(
                 "Due date & time should be no earlier than that the date the todo was created."
             )
@@ -39,6 +40,12 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+
+    # Overriding the save method because clean method needs to be manually called
+    def save(self, *args, **kwargs):
+        # Validation
+        self.clean()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
 
     class Meta:
         ordering = [
