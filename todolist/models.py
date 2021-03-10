@@ -22,7 +22,7 @@ class Todo(models.Model):
     title = models.CharField(max_length=200)
     notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    due = models.DateTimeField(default=timezone.now)
+    due = models.DateTimeField()
 
     def clean(self):
         # Due date & time should be no earlier than created_at.

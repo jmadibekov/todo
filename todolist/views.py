@@ -1,4 +1,4 @@
-from rest_framework import permissions, viewsets
+from rest_framework import viewsets
 
 from .models import Category, Todo
 from .serializers import CategorySerializer, TodoSerializer
@@ -11,9 +11,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [
-        permissions.IsAuthenticated,
-    ]
 
 
 class TodoViewSet(viewsets.ModelViewSet):
@@ -23,6 +20,3 @@ class TodoViewSet(viewsets.ModelViewSet):
 
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    permission_classes = [
-        permissions.IsAuthenticated,
-    ]
