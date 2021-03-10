@@ -3,10 +3,19 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
 
 class Todo(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     notes = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
