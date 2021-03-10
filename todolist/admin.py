@@ -5,7 +5,7 @@ from .models import Category, Todo
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    fields = (
+    list_display = (
         "name",
         "parent",
     )
@@ -13,8 +13,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
-    fields = (
+    list_display = (
         "title",
         "notes",
         "category",
+        "type",
     )
