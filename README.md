@@ -20,7 +20,7 @@ Once it has started, you can open your browser to [http://localhost/api](http://
 
 ## Testing
 
-The project contains basic tests to check models & API. Run the following command from web the container at the Docker to test:
+The project contains basic tests to check models & API. Run the following command from web container at the Docker to test:
 ```bash
 python manage.py test
 ```
