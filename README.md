@@ -15,8 +15,8 @@ To build and run the app, clone the repo and use the following command after ins
 docker-compose up
 ```
 
-Once it has started, you can open your browser to [http://localhost/api](http://localhost/api).
-- You can also head to [http://localhost/admin](http://localhost/admin), but you need to first create superuser for that.
+Once it has started, you can open your browser to [http://localhost:8000/api](http://localhost:8000/api).
+- You can also head to [http://localhost:8000/admin](http://localhost:8000/admin), but you need to first create superuser for that.
 
 ## Testing
 
