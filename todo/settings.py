@@ -29,7 +29,8 @@ SECRET_KEY = os.getenv(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# The value of the DEBUG will be True by default, but will only be False if the value of the DJANGO_DEBUG environment variable is set to False.
+# The value of the DEBUG will be True by default, but will only be False if the value of the DJANGO_DEBUG
+# environment variable is set to False.
 DEBUG = os.getenv("DJANGO_DEBUG", "") != "False"
 
 ALLOWED_HOSTS = []
