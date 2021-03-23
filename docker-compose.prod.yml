@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     build:
-      context: .
+      context: ./web
       dockerfile: Dockerfile.prod
     command: gunicorn todo.wsgi:application --bind 0.0.0.0:8000
     volumes:
