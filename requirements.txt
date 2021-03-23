@@ -33,6 +33,9 @@ djangorestframework==3.12.2; python_version >= "3.5" \
 filelock==3.0.12; python_full_version >= "3.6.1" \
     --hash=sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836 \
     --hash=sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59
+gunicorn==20.0.4; python_version >= "3.4" \
+    --hash=sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c \
+    --hash=sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626
 identify==2.1.1; python_full_version >= "3.6.1" \
     --hash=sha256:220169a38a0c977c8fef377dc808d6a3330641b5211ec7356c7bbe73cda487c7 \
     --hash=sha256:da3d757c94596c50865aae63db6ba4e2e5e3f666c3ea6a6da0cd09a8b2d34abc
