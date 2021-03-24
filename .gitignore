@@ -1,3 +1,6 @@
+# VSCode settings
+.vscode
+
 # Production environment variables
 .env.prod
 .env.prod.db
